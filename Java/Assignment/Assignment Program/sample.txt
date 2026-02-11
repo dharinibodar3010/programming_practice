@@ -1,0 +1,2 @@
+Hello Java File Handling
+This file is written using FileWriter
