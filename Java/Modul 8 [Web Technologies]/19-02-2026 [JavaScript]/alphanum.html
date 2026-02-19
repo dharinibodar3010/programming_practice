@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	
+	function isalphabet(elem,msg)
+	{
+		
+		var alphanumexp = /^[a-zA-Z0-9]+$/;
+		
+		if(elem.value.match(alphanumexp))
+		{
+			return true;
+		}
+		else
+		{
+			alert(msg);
+			elem.focus;
+			return false;
+		}
+	
+	}
+	
+
+</script>
+
+</head>
+<body>
+
+
+<form>
+		Enter Name:<input type="text" name="name" id="name"/>
+		<input type="submit" value="go" onclick="isalphabet(document.getElementById('name'),'Please Enter Alphanumeric Only')"/>
+</form>
+
+</body>
+</html>
