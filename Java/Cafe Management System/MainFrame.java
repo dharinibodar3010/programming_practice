@@ -380,13 +380,7 @@ class AdminFrame
             double grandTotal = 0;
  
             while(rs.next())
-            {
-//                model.addRow(new Object[] {
-//                		rs.getString("item_name"),
-//                		rs.getInt("quantity"),
-//                		rs.getDouble("total")
-//                });
-            	
+            {	
             	String item = rs.getString("item_name");
             	int quantity = rs.getInt("quantity");
             	double total = rs.getDouble("total");
@@ -672,4 +666,5 @@ class UserFrame {
                         "Total Items : " + totalItems +
                         "\nTotal Bill : Rs." + totalBill);
     }
+
 }
