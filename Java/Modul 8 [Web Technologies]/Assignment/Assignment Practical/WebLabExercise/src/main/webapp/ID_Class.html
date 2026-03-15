@@ -1,0 +1,41 @@
+<!-- CSS: ID and Class Selectors
+5) Create a webpage where:
+	 o You apply an id to an element and style it uniquely.
+	 o Use class to apply the same style to multiple elements. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>ID and Class Example</title>
+	
+	<style>
+		/* ID selector (unique) */
+		#mainTitle {
+			color: red;
+			text-align: center;
+			font-size: 28px;
+		}
+		
+		/* Class selector (multiple elements) */
+		.commonBox {
+			background-color: lightblue;
+			border: 2px solid black;
+			padding: 10px;
+			margin: 10px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- ID used only once -->
+	<h1 id="mainTitle">This is styled using ID</h1>
+	
+	<!-- Class used for multiple elements -->
+	<p class="commonBox">Paragraph 1 using class</p>
+	<p class="commonBox">Paragraph 2 using class</p>
+	<div class="commonBox">Div using class</div>
+	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <display-name>W_Multiple_Servlet_Context</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.xhtml</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.xhtml</welcome-file>
+  </welcome-file-list>
+  
+<context-param>
+    <param-name>projectName</param-name>
+    <param-value>My First Web App</param-value>
+</context-param>
+
+<context-param>
+    <param-name>supportEmail</param-name>
+    <param-value>support@example.com</param-value>
+</context-param>
+
+<servlet>
+    <servlet-name>AboutServlet</servlet-name>
+    <servlet-class>com.demo.AboutServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>AboutServlet</servlet-name>
+    <url-pattern>/about</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ContactServlet</servlet-name>
+    <servlet-class>com.demo.ContactServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>ContactServlet</servlet-name>
+    <url-pattern>/contact</url-pattern>
+</servlet-mapping>
+
+</web-app>

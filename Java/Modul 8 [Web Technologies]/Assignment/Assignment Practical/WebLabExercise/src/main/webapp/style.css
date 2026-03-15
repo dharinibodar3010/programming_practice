@@ -1,0 +1,25 @@
+/* CSS: Inline CSS, Internal CSS, External CSS
+2.2) Create a webpage where:
+	  o You apply inline CSS to an element.
+	  o Use internal CSS for another element.
+	  o Link an external CSS file to style other elements*/
+
+@charset "UTF-8";
+
+/* EXTERNAL CSS*/
+
+.external-style {
+	color: green;
+	font-size: 18px;
+	font-family: Verdana;
+}
+
+.box {
+	width: 200px;
+	height: 100px;
+	background-color: lightgray;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 100px;
+	margin: 20px auto;
+}

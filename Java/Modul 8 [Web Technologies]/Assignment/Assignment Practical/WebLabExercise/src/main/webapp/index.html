@@ -1,0 +1,43 @@
+<!-- CSS: Inline CSS, Internal CSS, External CSS
+2.1) Create a webpage where:
+	 o You apply inline CSS to an element.
+	 o Use internal CSS for another element.
+     o Link an external CSS file to style other elements -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<title>CSS Types Demo</title>
+
+	<!-- INTERNAL CSS -->
+	<style>
+		h2{
+			color: blue;
+			text-align: center;
+			font-family: Arial;
+		}
+	</style>
+	
+	<!-- EXTERNAL CSS LINK -->
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<!-- INLINE CSS -->
+	<h1 style="color: red; background-color: yellow; text-align: center;">
+		Inline CSS Example
+	</h1>
+	
+	<!-- INTERNAL CSS -->
+	<h2>Internal CSS Example</h2>
+	
+	<!-- EXTERNAL CSS -->
+	<p class="external-style"> 
+		This paragraph is styled using External CSS.
+	</p>
+	
+	<div class="box">External CSS Box</div>	
+
+</body>
+</html>
