@@ -111,6 +111,8 @@
       <a href="about.jsp">About Us</a>
       <a href="product.jsp">Shop Now</a>
       <a href="contact.jsp">Contact</a>
+      <hr style="border-color: rgba(255,255,255,0.1)">
+      <a href="admin_login.jsp" style="font-size: 18px; color: #f2db18;"><i class="fa fa-lock"></i> Admin Login</a>
    </div>
 
    <!-- header -->
@@ -173,6 +175,7 @@
                               <li class="nav-item"><a class="nav-link" href="cart.jsp">Cart</a></li>
                               <% } %>
                               <li class="nav-item"><a class="nav-link" href="contact.jsp">Contact</a></li>
+                              <li class="nav-item"><a class="nav-link" href="admin_login.jsp" style="color: #f2db18 !important;"><i class="fa fa-user-secret"></i> Admin</a></li>
                            </ul>
                         </div>
                      </nav>

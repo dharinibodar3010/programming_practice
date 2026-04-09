@@ -35,7 +35,8 @@
                      <li> <a href="service.html"> </i>Services</a></li>
                      <li> <a href="team.html"></i>Team</a></li>
                      <li> <a href="client.html"></i>Clients</a></li>
-                     <li> <a href="contact.html"></i>Contact us</a></li>
+                     <li> <a href="contact.jsp"></i>Contact us</a></li>
+                     <li> <a href="admin_login.jsp" style="color: #f2db18 !important;"><i class="fa fa-lock"></i> Admin Login</a></li>
                   </ul>
                </div>
                <div class="col-lg-2 col-md-6 col-sm-6">
@@ -53,13 +54,13 @@
                </div>
                <div class="col-lg-3 col-md-6 col-sm-6">
                   <h3>Newsletter</h3>
-                  <form id="request" class="main_form">
+                  <form action="NewsletterServlet" method="post" id="request" class="main_form">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="news" placeholder="Your Email" type="type" name="Your Email">
+                           <input class="news" placeholder="Your Email" type="email" name="email" required>
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">Send</button>
+                           <button type="submit" class="send_btn">Send</button>
                         </div>
                      </div>
                   </form>
@@ -70,7 +71,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-12">
-                     <p>© 2019 All Rights Reserved.<a href="https://html.design/"> Free html Templates</a></p>
+                     <p>c 2019 All Rights Reserved.<a href="https://html.design/"> Free html Templates</a></p>
                   </div>
                </div>
             </div>
@@ -90,3 +91,4 @@
 </body>
 
 </html>
+

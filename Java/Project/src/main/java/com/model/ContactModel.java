@@ -3,7 +3,7 @@ package com.model;
 public class ContactModel 
 {
 	int id;
-	String fullname,email,phone,feedback;
+	String fullname,email,phone,feedback,reply;
 	public int getId() {
 		return id;
 	}
@@ -34,6 +34,10 @@ public class ContactModel
 	public void setFeedback(String feedback) {
 		this.feedback = feedback;
 	}
-	
-	
+	public String getReply() {
+		return reply;
+	}
+	public void setReply(String reply) {
+		this.reply = reply;
+	}
 }

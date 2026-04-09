@@ -25,13 +25,6 @@ public class EmailUtility
         properties.setProperty("mail.smtp.port", port);
         properties.setProperty("mail.smtp.auth", "true");
         properties.setProperty("mail.smtp.starttls.enable", "true");
-//        properties.put("mail.smtp.host", host);
-//        properties.put("mail.smtp.port", port); 
-//        properties.put("mail.smtp.auth", "true");
-//        properties.put("mail.smtp.starttls.enable", "true");
-//        properties.put("mail.smtp.ssl.enable", "true");
-		//properties.put("mail.smtp.starttls.enable", "true"); 
-
  
         // creates a new session with an authenticator
         Authenticator auth = new Authenticator() {
@@ -51,13 +44,20 @@ public class EmailUtility
         msg.setRecipients(Message.RecipientType.TO, toAddresses);
         msg.setSubject(subject);
         msg.setSentDate(new Date());
-//        msg.setText(message);
         
-        // msg.setText(message); // Aa line kadhi nakho
-        msg.setContent(message, "text/html"); // HTML support mate aa line muko
+        // HTML support
+        msg.setContent(message, "text/html"); 
         
         // sends the e-mail
         Transport.send(msg);
- 
+    }
+    
+    public static void sendNewsletter(String host, String port,
+            String userName, String password, String toAddress,
+            String subject, String message)
+            throws AddressException, MessagingException {
+    	
+    	// Calling generic sendEmail method
+    	sendEmail(host, port, userName, password, toAddress, subject, message);
     }
 }

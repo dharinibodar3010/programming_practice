@@ -1,5 +1,6 @@
 <%@page import="com.dao.Dao"%>
 <%@page import="com.model.SignupModel"%>
+<%@page import="com.emailauth.EmailUtility"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -60,6 +61,40 @@
 						        session.setAttribute("email", email); 
 						        session.setAttribute("name", fname); 
 						        session.setAttribute("num", phone); 
+
+						        // Send beautiful notification email to Admin
+						        try {
+						            String emailHost = application.getInitParameter("host");
+						            String emailPort = application.getInitParameter("port");
+						            String emailUser = application.getInitParameter("user");
+						            String emailPass = application.getInitParameter("pass");
+						            String adminEmail = emailUser; 
+						            String subject = "New User Registration! - " + fname;
+						            
+						            String content = "<div style='font-family: Arial, sans-serif; background-color: #f4f6f9; padding: 30px;'>" +
+						                             "<div style='max-width: 600px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);'>" +
+						                             "<div style='background: linear-gradient(135deg, #032154 0%, #1e5799 100%); padding: 30px; text-align: center;'>" +
+						                             "<h1 style='color: #f2db18; margin: 0; font-size: 28px;'>New Registration Alert!</h1>" +
+						                             "</div>" +
+						                             "<div style='padding: 30px;'>" +
+						                             "<h2 style='color: #333333; font-size: 22px; margin-top: 0;'>Hello Admin,</h2>" +
+						                             "<p style='color: #555555; font-size: 16px; line-height: 1.5;'>Great news! A new user has just signed up on your shopping platform. Here are their details:</p>" +
+						                             "<div style='background-color: #f8f9fa; border-left: 6px solid #f2db18; padding: 20px; margin: 25px 0; border-radius: 4px;'>" +
+						                             "<p style='margin: 10px 0; font-size: 16px;'><strong style='color: #032154; width: 80px; display: inline-block;'>Name:</strong> <span>" + fname + "</span></p>" +
+						                             "<p style='margin: 10px 0; font-size: 16px;'><strong style='color: #032154; width: 80px; display: inline-block;'>Email:</strong> <span>" + email + "</span></p>" +
+						                             "<p style='margin: 10px 0; font-size: 16px;'><strong style='color: #032154; width: 80px; display: inline-block;'>Phone:</strong> <span>" + phone + "</span></p>" +
+						                             "</div>" +
+						                             "</div>" +
+						                             "<div style='background-color: #f1f1f1; padding: 20px; text-align: center; color: #888888; font-size: 13px;'>" +
+						                             "<p style='margin: 0;'>This is an automated notification from your E-Commerce Project.</p>" +
+						                             "</div>" +
+						                             "</div>" +
+						                             "</div>";
+
+						            EmailUtility.sendEmail(emailHost, emailPort, emailUser, emailPass, adminEmail, subject, content);
+						        } catch (Exception e) {
+						            e.printStackTrace();
+						        }
 
 						        response.sendRedirect("dashbaord.jsp");
 						    }

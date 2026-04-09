@@ -24,12 +24,12 @@
 
 	<context-param>
 		<param-name>user</param-name>
-		<param-value>rajhgodhani266@gmail.com</param-value>
+		<param-value>dharinibodar3010@gmail.com</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>pass</param-name>
-		<param-value>kglc alkn jkdo tmaz</param-value>
+		<param-value>zakd qqpy fwyx nula</param-value>
 	</context-param>
 	
 </web-app>

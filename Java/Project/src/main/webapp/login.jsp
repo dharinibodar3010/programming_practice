@@ -1,3 +1,4 @@
+<%@page import="com.emailauth.EmailUtility"%>
 <%@page import="com.model.SignupModel"%>
 <%@page import="com.dao.Dao"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
@@ -9,7 +10,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login Process</title>
 </head>
 <body>
 
@@ -22,27 +23,22 @@
     
     %>
 	<%
-			SignupModel m2 =Dao.login(m);
+			SignupModel m2 = Dao.login(m);
 	
 			if(m2!=null)
 			{
-				 out.print("Login Success");
-				session.setAttribute("project",true);
-				session.setAttribute("email",m.getEmail());
-				session.setAttribute("name",m2.getFullname());
-				session.setAttribute("num",m2.getPhone()); 
-				
-				
-				response.sendRedirect("dashbaord.jsp");
+				 session.setAttribute("project",true);
+				 session.setAttribute("email",m.getEmail());
+				 session.setAttribute("name",m2.getFullname());
+				 session.setAttribute("num",m2.getPhone()); 
+				 
+				 response.sendRedirect("dashbaord.jsp");
 			}
 			else
 			{
-				out.print("Login Fail");
+				out.print("<script>alert('Login Fail! Register first'); window.location='signin.jsp';</script>");
 			}
 	%>
-
-
-	
 
 </body>
 </html>

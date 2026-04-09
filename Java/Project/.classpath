@@ -16,9 +16,10 @@
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/jstl-1.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/jsp-api.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/jakarta.servlet-api-6.0.0.jar"/>
-	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/mysql-connector.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/mail_1.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/activation-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/alljarfile/mysql-connector-java-5.1.18-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Downloads/razorpay-java-1.3.9.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
