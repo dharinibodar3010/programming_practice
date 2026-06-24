@@ -1,0 +1,21 @@
+[{
+  "_id": {
+    "$oid": "6a3aace7b02c4942dc4615f1"
+  },
+  "name": "Laptop",
+  "description": "Dell i5",
+  "price": 50000,
+  "stock": 10,
+  "_class": "com.example.modal.Product"
+},
+{
+  "_id": {
+    "$oid": "6a3b6fa80e449516f451c1bf"
+  },
+  "name": "Smart Phone",
+  "description": "Samsung Galaxy S24",
+  "price": 75000,
+  "category": "Electronics",
+  "stock": 35,
+  "_class": "com.example.modal.Product"
+}]
