@@ -1,4 +1,4 @@
-package com.example.campusbot.model;
+package com.example.campusbot.dto;
 
 import java.util.List;
 

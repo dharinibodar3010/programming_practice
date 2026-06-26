@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.campusbot.model.ChatRequest;
-import com.example.campusbot.model.ChatResponse;
+import com.example.campusbot.dto.ChatRequest;
+import com.example.campusbot.dto.ChatResponse;
 import com.example.campusbot.service.OpenAIService;
 
 @RestController
