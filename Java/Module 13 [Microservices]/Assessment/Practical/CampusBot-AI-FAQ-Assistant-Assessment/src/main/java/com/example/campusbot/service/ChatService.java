@@ -3,7 +3,7 @@ package com.example.campusbot.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public class OpenAIService {
+public class ChatService {
 
     public String askQuestion(String question) {
 

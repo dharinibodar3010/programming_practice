@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.campusbot.dto.ChatRequest;
 import com.example.campusbot.dto.ChatResponse;
-import com.example.campusbot.service.OpenAIService;
+import com.example.campusbot.service.ChatService;
 
 @RestController
 @RequestMapping("/api")
 public class ChatController {
 
 	@Autowired
-	private OpenAIService service;
+	private ChatService service;
 
 	@PostMapping("/ask")
 	public ChatResponse askQuestion(@RequestBody ChatRequest request) {
 
-	    String answer = service.askQuestion(request.getQuestion());
+		String answer = service.askQuestion(request.getQuestion());
 
-	    return new ChatResponse(answer);
+		return new ChatResponse(answer);
 	}
 }
