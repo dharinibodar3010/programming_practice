@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.campusbot.model.AnswerResponse;
-import com.example.campusbot.model.QuestionRequest;
+import com.example.campusbot.dto.AnswerResponse;
+import com.example.campusbot.dto.QuestionRequest;
 import com.example.campusbot.service.AIService;
 
 @RestController
